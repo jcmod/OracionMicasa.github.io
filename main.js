@@ -7,16 +7,17 @@ var PORT=process.env.PORT || 4000;
 
 app.engine('hbs', expressHbs({defaultLayout: 'base', extname: 'hbs'}));
 app.set('view engine','hbs');
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname,'views'));
 
 //Middlewares
-
 app.use(bodyparser.json());
 app.use(express.urlencoded({extended:false}));
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 //enrutadores
 var indexRouter=require('./routes/index');
+
 
 app.use(indexRouter);
 
