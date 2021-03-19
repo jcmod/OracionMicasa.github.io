@@ -1,7 +1,7 @@
+const express = require('express');
+const router = express.Router();
 
-var router= require('express').Router();
-
-router.get('/', (req,res)=>{
+router.get('/',async(req,res)=>{
     res.render('templates/index');
 })
 

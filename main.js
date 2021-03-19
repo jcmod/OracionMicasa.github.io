@@ -3,7 +3,7 @@ var app=express();
 var path=require('path');
 var expressHbs=require('express-handlebars');
 var bodyparser=require('body-parser');
-var PORT=process.env.PORT || 4500;
+var PORT=process.env.PORT || 4000;
 
 app.engine('hbs', expressHbs({defaultLayout: 'base', extname: 'hbs'}));
 app.set('view engine','hbs');
@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //enrutadores
 var indexRouter=require('./routes/index');
 
-app.use('/index', indexRouter);
+app.use(indexRouter);
 
 
 app.listen(PORT, () =>{
