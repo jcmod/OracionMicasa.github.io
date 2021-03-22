@@ -10,15 +10,17 @@
 
 body {
   font-family: "Oswald", sans-serif;
-  background-color: #e7e0e0;
-  /* Pattern from https://www.heropatterns.com/ */
+  background: #f12711;  
+	/* fallback for old browsers */
+	background: linear-gradient(to right, #334d50, #cbcaa5); 
+	 /* Chrome 10-25, Safari 5.1-6 */
   color: #1e272e;
   color: rgb(0, 0, 0);
   font-size: 16px;
 }
 
 a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 

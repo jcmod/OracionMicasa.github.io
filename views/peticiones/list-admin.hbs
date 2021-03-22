@@ -1,0 +1,31 @@
+<div class="row row-cols-1 row-cols-md-4 g-4">
+
+    {{#each notes}}
+    <div class="col">
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card text-center">
+                <div class="card-header bg-warning border-success">
+                    {{know}}
+                </div>
+                <div class="card-body text-success">
+                    <h5 class="card-title d-flex justify-content-between">{{title}}</h5>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <div class="card-footer bg-light border-success">
+                    MiCaSa
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="card mx-auto">
+        <div class="card-body">
+            <p class="lead">No hay peticiones todavía</p>
+            <a href="/peticiones/add" class="btn btn-success btn-block">Ingresar Petición</a>
+        </div>
+    </div>
+    {{/each}}
+
+</div>
+   

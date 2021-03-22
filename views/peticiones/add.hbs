@@ -1,0 +1,39 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+    <div class="card text-center">
+        <div class="card">
+            <div class="card-header">
+                <h3>Petición</h3>
+            </div>
+            <div class="card-body">
+                <form action="/peticiones/add" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="title" class="form-control" placeholder="Nombre"
+                        autofocus>
+                    </div><br>
+                    <div class="form-group">
+                        <input class="form-control" list="datalistOptions" name="know" id="know" placeholder="Elija el tipo de oración">
+                        <datalist id="datalistOptions">
+                            <option value="Petición">
+                            <option value="Accion de Gracias">
+                        </datalist>
+                    </div><br>
+                    <div class="form-group">
+                        <textarea name="description" rows="2" class="form-control" placeholder="Description"></textarea>
+                    </div><br>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
